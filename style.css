@@ -61,7 +61,7 @@ body {
 }
 
 .join-btn:hover {
-  background-color: #f0a40068;
+  background-color: var(--color-accent-dark);
 }
 
 .navbar-menu {
@@ -439,6 +439,73 @@ body {
   font-size: 1.5rem;
 }
 
+/* conten-servis */
+.conten-servies {
+  min-height: 100vh;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 2rem;
+}
+
+.top-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.img-box {
+  flex: 1 1 300px;
+  max-width: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.img-box img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
+
+.img-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.content-text {
+  flex: 1 1 200px;
+}
+
+.content-text h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--color-text-dark);
+}
+
+.content-text p {
+  font-size: 16px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+.bottom-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.bottom-images .img-box {
+  flex: 1 1 300px;
+  max-width: 48%;
+}
+
 /* RESPONSIVE - fix ke max-width agar aktif saat layar kecil */
 @media (max-width: 760px) {
   .navbar-container {
@@ -555,6 +622,51 @@ body {
 
   .state-list h3 {
     font-size: 1rem;
+  }
+
+  /* content-servis */
+  .top-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content-text h1 {
+    font-size: 28px;
+  }
+
+  .content-text p {
+    font-size: 14px;
+  }
+
+  .bottom-images .img-box {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-section {
+    gap: 10px;
+  }
+
+  .content-text h1 {
+    font-size: 24px;
+  }
+
+  .content-text p {
+    font-size: 12px;
+  }
+
+  .img-box img {
+    border-radius: 8px;
+  }
+
+  .bottom-images {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .bottom-images .img-box {
+    max-width: 100%;
   }
 }
 

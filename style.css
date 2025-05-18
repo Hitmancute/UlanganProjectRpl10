@@ -161,7 +161,7 @@ body {
   font-size: clamp(2.2rem, 5vw, 3.5rem);
   margin-bottom: 2rem;
   color: var(--color-text-dark);
-  animation: fadeInUp 1s ease 0.4s forwards;
+  animation: appear 1s ease 0.4s forwards;
 }
 
 .About-text p {
@@ -169,13 +169,13 @@ body {
   line-height: 1.6;
   margin-bottom: 4rem;
   color: var(--color-text-light);
-  animation: fadeInLeft 1s ease 0.4s forwards;
+  animation: appear 1s ease 0.4s forwards;
 }
 
 /* Tombol */
 .buttons {
   margin-top: 2rem;
-  animation: fadeInLeft 1s ease 0.2s forwards;
+  animation: appear 1s ease 0.4s forwards;
 }
 
 .buttons a {
@@ -198,13 +198,13 @@ body {
   max-width: 640px;
   height: auto;
   margin-top: 4rem;
-  animation: fadeInUp 1s ease forwards;
+  animation: appear 1s ease 0.4s forwards;
 }
 
 .About-image {
   flex: 1 1 200px;
   text-align: center;
-  animation: fadeInRigth 1s ease 0.2s forwards;
+  animation: appear 1s ease 0.4s forwards;
 }
 
 .About-image img {
@@ -231,6 +231,9 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 80px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 /* text */
@@ -301,6 +304,9 @@ body {
   height: 200px;
   border-radius: 10px;
   object-fit: cover;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .comfortable-space {
@@ -312,6 +318,9 @@ body {
 
 .text-side {
   flex: 1 1 200px;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .text-side h1 {
@@ -342,6 +351,9 @@ body {
 /* facilities-room */
 .facilities {
   margin-top: 5rem;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
 }
 
 .facilities-header h2 {
@@ -865,7 +877,7 @@ footer {
   }
 
   /* footer */
-   footer {
+  footer {
     flex-direction: column;
     gap: 2rem;
     padding: 2rem 1rem;
@@ -918,7 +930,7 @@ footer {
     margin-top: 1rem;
     font-size: 0.95rem;
   }
-  .bulet-top{
+  .bulet-top {
     display: none;
   }
 }
@@ -1158,35 +1170,13 @@ footer {
   }
 }
 
-@keyframes fadeInUp {
+@keyframes appear {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: scale(0.5);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInRigth {
-  from {
-    opacity: 0;
-    transform: translateX(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
+    transform: scale(1);
   }
 }
